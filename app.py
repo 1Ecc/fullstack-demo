@@ -8,6 +8,11 @@ app = Flask(__name__)
 def hello():
     return "<h1>✅ 恭喜！后端自动化部署彻底成功！</h1><p>这是一次端到端的自动化闭环测试。</p>"
 
+@app.route('/')
+def index():
+    return "欢迎访问后台首页，请访问 /api/ 查看接口数据。"
+
+
 if __name__ == '__main__':
     # 获取环境变量中的 PORT，如果没有则默认 5000
     # 这对 Railway 等托管平台非常重要
